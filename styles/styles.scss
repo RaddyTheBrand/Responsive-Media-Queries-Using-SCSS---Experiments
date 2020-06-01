@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Ibarra+Real+Nova:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap');
+
+// @import "method-1/partials/_mixings.scss";
+
+body {
+    font-family: 'Ibarra Real Nova', serif;
+    background-color: #F9F2F2;
+    font-size: 1.2em;
+    margin: 0 1em;
+    box-sizing: border-box;
+} 
+ 
+img { 
+    max-width: 100%;
+    height: auto;  
+}  
+ 
+h4 {
+    font-size: 1.4em;
+    margin: 0;
+}
+
+@mixin customShadow($size) {
+    -webkit-box-shadow: -$size $size 0px 0px rgba(0,0,0,1);
+    -moz-box-shadow: -$size $size 0px 0px rgba(0,0,0,1);
+    box-shadow: -$size $size 0px 0px rgba(0,0,0,1);
+    margin-left: $size;
+    border: 2px solid #000;
+
+    &:hover {
+        cursor: pointer;
+    }
+} 
+
+
+button, input {
+    padding: 6px 10px;
+    @include customShadow(8px); 
+}
+
+  
+
+@import "method-2/media-queries.scss";
+
+
+// header {
+//     display: grid;
+//     padding: 20px 0px;
+//     border-bottom: 1px solid #000;
+
+//     @include desktop {
+//         -ms-grid-columns: 1fr 1fr 1fr;  
+// 		grid-template-columns: 1fr 1fr 1fr; 
+//     }
+
+//     .logo {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: center;
+//         align-items: center;
+       
+//         font-family: 'Archivo Narrow', sans-serif;    
+        
+//         @include desktop {
+//             justify-content: flex-start;
+//         }
+ 
+//         div {
+//             font-size: 1em;
+//             color: #000;
+//             background-color: #fff;
+//             padding: 6px 10px;
+//             @include customShadow(8px); 
+            
+//             @include desktop {
+//                 background-color: #fff;
+//             }
+//         }
+//     }
+
+//     .search {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+
+//         @include desktop {
+//             justify-content: flex-end;
+//         }
+//     }
+ 
+//     nav {
+//         ul{
+//             padding: 0;
+//             list-style: none;
+//             display: flex;
+//             flex-direction: row;
+//             flex-wrap: nowrap;
+//             justify-content: center;
+//             align-items: center;
+//             align-content: center;
+//             li {
+//                 padding: 6px 20px;
+//             }
+//         }
+//     }
+// }
+
+
+// section.articles { 
+//     display: grid;
+//     grid-gap: 2em;
+//     margin-top: 1em;
+
+//     article {
+//         background-color: #fff;
+//         @include customShadow(8px); 
+
+//         .info {
+//             padding: 20px;
+//         }
+//     }
+
+//     @include desktop {
+//         -ms-grid-columns: 1fr 1fr 1fr 1fr;  
+// 		grid-template-columns: repeat(4, 1fr);
+//     }
+    
+//     @include tablet {
+//         -ms-grid-columns: 1fr 1fr;  
+//         grid-template-columns: repeat(2, 1fr);
+//     }
+// }
+ 
